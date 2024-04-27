@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Blog{% endblock %}
+    {% block body %}
+<!--        Post-->
+        <article class="post">
+            <header>
+                <div class="title">
+                    <h2><a href="#">{{post.Title}}</a></h2>
+                    <p>{{post.Subtitle}}</p>
+                </div>
+                <div class="meta">
+                    <time class="published" datetime="2015-11-01">{{post.DatePosted}}</time>
+                    <a href="#" class="author"><span class="name">{{post.Author}}</span></a>
+                </div>
+            </header>
+
+            <span class="image feature"><img src="{{post.Image}}" alt="Image" /></span>
+            <p>{{post.Content1}}</p><br>
+            <p>{{post.Content2}}</p><br><br>
+            <ul class="stats">
+                <li><a href="#">General</a></li>
+                <li><a href="#" class="icon solid fa-heart">28</a></li>
+                <li><a href="#" class="icon solid fa-comment">128</a></li>
+            </ul>
+        </article>
+    {% endblock %}

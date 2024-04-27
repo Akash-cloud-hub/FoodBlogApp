@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Blog App{% endblock %}
+{% block header %} Blog App {% endblock %}
+{% block header2 %} By Akash {% endblock %}
+    {% block body %}
+
+        {% for post in posts %}
+            <!-- Post preview-->
+            <div class="post-preview">
+                <a href="/post/{{post['Slug']}}">
+                    <h2 class="post-title">{{post['Title']}}</h2>
+                    <h3 class="post-subtitle">{{post['Subtitle']}}</h3>
+                </a>
+                <p class="post-meta">
+                    Posted by
+                    <a href="#!">{{post['Author']}}</a>
+                    {{post['DatePosted']}}
+                </p>
+            </div>
+            <!-- Divider-->
+            <hr class="my-4" />
+        {% endfor %}
+
+        <ul class="actions pagination">
+            <li><a href=/Library{{prev}}> < Prev page </a></li>
+            <li><a href=/Library{{next}}> Next page > </a></li>
+        </ul>
+    {% endblock %}

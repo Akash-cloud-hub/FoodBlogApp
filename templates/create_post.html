@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Upload blog{% endblock %}
+    {% block body %}
+
+        <div class="form-container">
+            <form method="post" action="/create_post">
+
+                <label for="Title">Title : </label>
+                <input type="text" name = "Title" placeholder="Title.." id = "Title" required>
+
+                <label for="Subtitle">Subtitle : </label>
+                <input type="text" name = "Subtitle" placeholder="Subtitle.." id = "Subtitle" required>
+
+                <label for="Location">Location : </label>
+                <input type="text" name = "Location" placeholder="Location.." id = "Location" required>
+
+                <label for="Author">Author : </label>
+                <input type="text" name = "Author" placeholder="Author.." id = "Author" required>
+
+                <label for="DatePosted">DatePosted : </label>
+                <input type="datetime-local" name = "DatePosted" placeholder="DatePosted.." id = "DatePosted" required>
+
+                <label for="Image">Image : </label>
+                <input type="text" name = "Image" placeholder="Image.." id = "Image" required>
+
+                <label for="Content1">Content 1 : </label>
+                <textarea name="Content1" id="Content1"></textarea>
+
+                <label for="Content2">Content2 : </label>
+                <textarea name="Content2" id="Content2"></textarea>
+
+                <label for="Slug">Slug : </label>
+                <input type="text" name = "Slug" placeholder="Slug.." id = "Slug" required>
+
+                <button type="submit" class="button large">Create Post</button>
+            </form>
+        </div>
+
+    {% endblock %}
